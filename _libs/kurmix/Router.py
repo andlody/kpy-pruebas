@@ -10,7 +10,7 @@ PATH = os.getcwd()
 
 class Router:
 	def __init__(self):
-		print os.environ.get('HOSTNAME', '127.0.0.1')
+		print os.environ.get('HOST', '127.0.0.1')
 		self = SharedDataMiddleware(self, {'/public/': os.path.join(PATH, 'public')})
 		port = os.environ.get('PORT', 8000)
 		print '::::::...>>>'+str(port) 
