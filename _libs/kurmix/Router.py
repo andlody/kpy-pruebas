@@ -10,11 +10,11 @@ PATH = os.getcwd()
 
 class Router:
 	def __init__(self):
-		print 'holi'
+		print os.uname()
 		self = SharedDataMiddleware(self, {'/public/': os.path.join(PATH, 'public')})
 		port = os.environ.get('PORT', 8000)
 		print '::::::...>>>'+str(port) 
-		run_simple('127.0.0.1',int(port),self, use_reloader=True)
+		run_simple('0.0.0.0',int(port),self, use_reloader=True)
 
 	def __call__(self,environ,start_response):
 		return self.route(environ,start_response)
