@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% include v.partial("head") %}
+    </head>
+    <body>
+	  	<!-- navbar -->
+			{% include v.partial("navbar") %}
+		<!-- fin navbar -->
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-3">				
+                   {% include v.partial("left") %}
+                </div>
+				<!-- body --> 
+		        	<div class="col-lg-6">
+		            	<div class="panel panel-body text-center">
+		                	{% include v.body %}
+		            	</div>
+					</div>
+				<!-- fin body -->        
+                <div class="col-lg-3">				
+                    {% include v.partial("right") %}
+                </div>
+            </div>		
+		</div>
+		<!-- footer -->			
+			{% include v.partial("footer") %}
+        <!-- fin footer -->
+    </body>
+</html>
