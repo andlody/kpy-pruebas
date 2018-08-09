@@ -17,7 +17,7 @@ class Router:
 		self = SharedDataMiddleware(self, {'/public/': os.path.join(PATH, 'public')})
 		port = os.environ.get('PORT', 8000)
 		print '::::::...>>>'+str(port) 
-		run_simple('0.0.0.0',int(port),self, use_reloader=True)
+		run_simple('localhost',int(port),self, use_reloader=True)
 
 	def __call__(self,environ,start_response):
 		return self.route(environ,start_response)
